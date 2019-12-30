@@ -27,7 +27,7 @@ if __name__ == "__main__":
     CF.BaseUrl.set(base_url)
 
     # only jpg file
-    images = glob.glob(parameters.images_to_compare_path + '*.jpg')
+    images = glob.glob(parameters.images_to_compare_path + '*.*')
     cnt = 0
 
     for img in images:
@@ -40,6 +40,11 @@ if __name__ == "__main__":
         # detect a face in each of the images
         faces = [CF.face.detect(img_url) for img_url in img_compare]
 
+        # if face is not detected in the 'img' -> continue
+        if not faces[1]:
+            print('ERROR in ',img, ': face is not detected...\n')
+            continue
+
         # compare two faces
         each_similarity = CF.face.verify(faces[0][0]['faceId'], faces[1][0]['faceId'])
 
@@ -48,8 +53,8 @@ if __name__ == "__main__":
             cnt += 1
 
         # print the result
-        print("< Similarity >", each_similarity)
+        print("\t- Similarity\n", "\t" + str(each_similarity), '\n')
 
     # print similarity
     similarity = cnt / len(images)
-    print("\n\n** Percentage of matcing =", str(similarity) + " %" )
+    print("\n\n\t** Percentage of matching =", str(similarity) + " %" )

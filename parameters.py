@@ -1,5 +1,5 @@
-profile_imgURL = 'https://ibb.co/0qS77k3'
+profile_imgURL = 'https://raw.githubusercontent.com/dokylee54/python-azure-face-similarity/master/profile/profile.jpg'
 
-subscription_key = "bdc06bf4e1b543aaa8e378e67d4c792b" 
+subscription_key = "<Replace with your subscription_key>" 
 
-images_to_compare_path = "/Users/dokylee/Desktop/dokylee/girlsinICT/dev/face_similarity/face_images/"
+images_to_compare_path = "/Users/dokylee/Desktop/dokylee/girlsinICT/dev/face_images/"
