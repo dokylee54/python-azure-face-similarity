@@ -6,9 +6,30 @@ import parameters
 
 
 '''
-temporary server for hosting a profile image:
+server for hosting a profile image: 
+    
+    github
 
-    https://imgbb.com/
+output format:
+
+    /Users/dokylee/Desktop/dokylee/girlsinICT/dev/face_images/rocky3.jpg
+        - Similarity
+        {'isIdentical': True, 'confidence': 0.70765} 
+
+    /Users/dokylee/Desktop/dokylee/girlsinICT/dev/face_images/rocky2.jpg
+        - Similarity
+        {'isIdentical': True, 'confidence': 0.64596} 
+
+    /Users/dokylee/Desktop/dokylee/girlsinICT/dev/face_images/ggobuk.jpg
+    ERROR in  /Users/dokylee/Desktop/dokylee/girlsinICT/dev/face_images/ggobuk.jpg : face is not detected...
+
+    /Users/dokylee/Desktop/dokylee/girlsinICT/dev/face_images/thor.png
+        - Similarity
+        {'isIdentical': False, 'confidence': 0.11609} 
+
+
+
+        ** Percentage of matcing = 0.5 %
 
 '''
 
